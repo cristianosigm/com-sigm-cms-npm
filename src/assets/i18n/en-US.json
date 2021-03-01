@@ -1,0 +1,9 @@
+{
+    "user": {
+        "email": "Email",
+        "name": "Name",
+        "displayName": "Nickname",
+        "password": "Password",
+        "confirmPassword": "Confirm Password"
+    }
+}

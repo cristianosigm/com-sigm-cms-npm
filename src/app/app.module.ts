@@ -7,14 +7,15 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SignupComponent } from './component/signup/signup.component';
+import { HomeComponent } from './component/home/home.component';
 
-export function TranslationLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignupComponent,
+    HomeComponent
   ],
   imports: [
     FormsModule,
@@ -24,7 +25,7 @@ export function TranslationLoaderFactory(http: HttpClient) {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: TranslationLoaderFactory,
+        useFactory: httpTranslateLoader,
         deps: [HttpClient]
       }
     })
@@ -34,3 +35,7 @@ export function TranslationLoaderFactory(http: HttpClient) {
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
