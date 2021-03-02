@@ -9,13 +9,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { HomeComponent } from './component/home/home.component';
+import { AdminHeaderComponent } from './component/admin-header/admin-header.component';
+import { AdminComponent } from './component/admin/admin.component';
+import { ContentComponent } from './component/content/content.component';
+import { SigninComponent } from './component/signin/signin.component';
+import { AdminContentComponent } from './component/admin-content/admin-content.component';
+import { AdminUsersComponent } from './component/admin-users/admin-users.component';
+import { PublicHeaderComponent } from './component/public-header/public-header.component';
+import { PublicFooterComponent } from './component/public-footer/public-footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    AdminHeaderComponent,
+    AdminComponent,
+    ContentComponent,
+    SigninComponent,
+    AdminContentComponent,
+    AdminUsersComponent,
+    PublicHeaderComponent,
+    PublicFooterComponent
   ],
   imports: [
     FormsModule,

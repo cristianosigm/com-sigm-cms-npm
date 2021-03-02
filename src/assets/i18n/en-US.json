@@ -4,6 +4,6 @@
         "name": "Name",
         "displayName": "Nickname",
         "password": "Password",
-        "confirmPassword": "Confirm Password"
+        "passwordConfirm": "Confirm Password"
     }
 }

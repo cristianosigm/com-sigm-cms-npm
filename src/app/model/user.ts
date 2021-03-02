@@ -1,18 +1,19 @@
 export class User {
-    id: number;
+
+    id!: number;
     idRole: number;
     approved: boolean;
     blocked: boolean;
-    dateApproval: Date;
-    dateBlocked: Date;
-    dateLastLogin: Date;
-    dateValidation: Date;
+    dateApproval!: Date;
+    dateBlocked!: Date;
+    dateLastLogin!: Date;
+    dateValidation!: Date;
     displayName: string;
     email: string;
     failedAttempts: number;
     name: string;
     password: string;
-    confirmPassword: string;
+    passwordConfirm: string;
     username: string;
     validated: boolean;
 
@@ -20,7 +21,13 @@ export class User {
         this.idRole = 0;
         this.approved = false;
         this.blocked = false;
+        this.displayName = '';
+        this.email = '';
         this.failedAttempts = 0;
+        this.name = '';
+        this.password = '';
+        this.passwordConfirm = '';
+        this.username = '';
         this.validated = false;
     }
 }
