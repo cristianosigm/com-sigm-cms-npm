@@ -24,4 +24,9 @@
         <input type="text" class="form-control" id="passwordConfirm" name="passwordConfirm"
             [(ngModel)]="user.passwordConfirm" />
     </div>
+    <!-- Button Bar -->
+    <div class="button-bar">
+        <button type="submit" class="btn-admin btn-success">{{ 'button.save' | translate }}</button>
+        <button type="button" class="btn-admin btn-primary" (click)="close()">{{ 'button.back' | translate }}</button>
+    </div>
 </form>

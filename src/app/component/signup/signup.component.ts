@@ -31,7 +31,7 @@ export class SignupComponent implements OnInit {
   }
 
   close(): void {
-    this.router.navigate(['/person-list']);
+    this.router.navigate(['/home']);
   }
 
 }
