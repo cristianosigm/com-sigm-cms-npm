@@ -1,0 +1,29 @@
+{
+    "button": {
+        "back": "Voltar",
+        "save": "Salvar",
+        "signin": "Login",
+        "submit": "Enviar"
+    },
+    "form": {
+        "login": {
+            "title": "Acesse sua conta",
+            "txtreset": "Esqueceu sua senha? Clique ",
+            "txtsignup": "Não tem uma conta? Cadastre-se ",
+            "txthere": "aqui"
+        }
+    },
+    "login": {
+        "label": {
+            "username": "Usuário:",
+            "password": "Senha:"
+        }
+    },
+    "user": {
+        "email": "Email",
+        "name": "Nome",
+        "displayName": "Apelido",
+        "password": "Senha",
+        "passwordConfirm": "Confirmar Senha"
+    }
+}

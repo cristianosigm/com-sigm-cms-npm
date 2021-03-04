@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  loginHidden = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleLoginForm(): void {
+    this.loginHidden = !this.loginHidden;
   }
 
 }

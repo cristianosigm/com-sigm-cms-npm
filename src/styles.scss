@@ -1,1 +1,159 @@
-/* You can add global styles to this file, and also import other style files */
+@import "src/assets/themes/theme-selector.scss";
+
+* {
+  color: $color-content-base;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 20pt;
+}
+
+.header {
+  background-color: $color-header-bg;
+  box-shadow: 0 3px 9px 4px $color-header-shadow;
+  display: block;
+  color: $color-header-text;
+  margin: 0;
+  padding: 40pt;
+}
+
+.footer {
+  border-top: solid 2pt lightgray;
+  margin: 20pt 40pt 0 40pt;
+  padding: 0 0 40pt 0;
+}
+
+.footer p {
+  font-size: small;
+  text-align: center;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+a {
+  color: $color-link;
+}
+
+button {
+  background-color: $color-button-bg;
+  border: solid 1px $color-button-border;
+  color: $color-button-text;
+  font-size: x-small;
+  margin: 2pt;
+  padding: 8pt 0;
+  width: 60pt;
+}
+
+button:hover {
+  background-color: $color-button-bg-hover;
+  border: solid 1px $color-button-border-hover;
+  color: $color-button-text-hover;
+}
+
+h1 {
+  margin: 10pt 0;
+}
+
+h2 {
+  margin: 8pt 0;
+}
+
+p {
+  margin: 6pt 0;
+  text-align: justify;
+}
+
+// ------------------------------------------------------------------------
+// login
+// ------------------------------------------------------------------------
+
+.login {
+  background-color: $color-login-bg;
+  border: none;
+  display: block;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.loginForm {
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 8px 2px gray;
+  font-size: small;
+  padding: 20pt;
+  text-align: center;
+  width: 300pt;
+}
+
+.loginForm p {
+  margin: 5pt;
+}
+
+.textSmall {
+  font-size: x-small;
+  padding: 4pt;
+}
+
+// ------------------------------------------------------------------------
+// forms
+// ------------------------------------------------------------------------
+
+.formButtonBar {
+  padding: 14pt 0;
+}
+
+.formGroup {
+  padding: 8pt 0;
+}
+
+input {
+  border: solid 1px #A0A0A0;
+  color: #A0A0A0;
+  padding: 5pt;
+}
+
+label {
+  display: inline-block;
+  padding: 4pt;
+  text-align: left;
+  width: 90pt;
+}
+
+// ------------------------------------------------------------------------
+// utils
+// ------------------------------------------------------------------------
+
+/*
+ * Centralize element vertically and horizontally.
+ * restrictions:
+ *  - parent must have "position: relative;"
+ */
+.middleOnParent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.alignJustify {
+  text-align: justify;
+}

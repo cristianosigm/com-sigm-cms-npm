@@ -1,4 +1,27 @@
 {
+    "button": {
+        "back": "Back",
+        "save": "Save",
+        "signin": "Sign in",
+        "submit": "Submit"
+    },
+    "form": {
+        "login": {
+            "title": "Sign in",
+            "txtreset": "Can't remember your password? Click ",
+            "txtsignup": "Don't have an account? Sign up ",
+            "txthere": "aqui"
+        },
+        "signup": {
+            "title": "Sign up"
+        }
+    },
+    "login": {
+        "label": {
+            "username": "Username:",
+            "password": "Password:"
+        }
+    },
     "user": {
         "email": "Email",
         "name": "Name",

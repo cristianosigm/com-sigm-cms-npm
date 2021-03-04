@@ -4,34 +4,33 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignupComponent } from './component/signup/signup.component';
-import { HomeComponent } from './component/home/home.component';
-import { AdminHeaderComponent } from './component/admin-header/admin-header.component';
-import { AdminComponent } from './component/admin/admin.component';
-import { ContentComponent } from './component/content/content.component';
-import { SigninComponent } from './component/signin/signin.component';
-import { AdminContentComponent } from './component/admin-content/admin-content.component';
-import { AdminUsersComponent } from './component/admin-users/admin-users.component';
-import { PublicHeaderComponent } from './component/public-header/public-header.component';
-import { PublicFooterComponent } from './component/public-footer/public-footer.component';
 
+
+import { AdminComponent } from './component/admin/admin.component';
+import { AdminContentComponent } from './component/admin-content/admin-content.component';
+import { AdminHeaderComponent } from './component/admin-header/admin-header.component';
+import { AdminUsersComponent } from './component/admin-users/admin-users.component';
+import { ContentComponent } from './component/content/content.component';
+import { HomeComponent } from './component/home/home.component';
+import { LoginComponent } from './component/login/login.component';
+import { PublicFooterComponent } from './component/public-footer/public-footer.component';
+import { SignupComponent } from './component/signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
-    HomeComponent,
-    AdminHeaderComponent,
+
     AdminComponent,
-    ContentComponent,
-    SigninComponent,
     AdminContentComponent,
+    AdminHeaderComponent,
     AdminUsersComponent,
-    PublicHeaderComponent,
-    PublicFooterComponent
+    ContentComponent,
+    HomeComponent,
+    LoginComponent,
+    PublicFooterComponent,
+    SignupComponent
   ],
   imports: [
     FormsModule,
@@ -52,6 +51,6 @@ import { PublicFooterComponent } from './component/public-footer/public-footer.c
 })
 export class AppModule { }
 
-export function httpTranslateLoader(http: HttpClient) {
+export function httpTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }

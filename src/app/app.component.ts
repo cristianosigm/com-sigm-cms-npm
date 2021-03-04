@@ -8,8 +8,9 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'Digital Agency CMS';
+
   constructor(public translate: TranslateService) {
-    translate.addLangs(['pt-BR']);
-    translate.setDefaultLang('pt-BR');
+    translate.addLangs(['en-US', 'pt-BR']);
+    translate.setDefaultLang('en-US');
   }
 }

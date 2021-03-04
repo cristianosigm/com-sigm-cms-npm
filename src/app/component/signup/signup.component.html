@@ -1,32 +1,37 @@
-<h1>Signup</h1>
-<div>
-    <p>This is the signup page.</p>
+<div class="login">
+    <form (ngSubmit)="onSubmit()">
+        <div class="loginForm middleOnParent">
+            <!-- Form Content ......................... -->
+            <h1>{{ 'form.signup.title' | translate }}</h1>
+            <div class="formGroup">
+                <label for="email">{{ 'user.email' | translate }}</label>
+                <input type="text" class="form-control" id="email" name="email" [(ngModel)]="user.email" />
+            </div>
+            <div class="formGroup">
+                <label for="name">{{ 'user.name' | translate }}</label>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.name" />
+            </div>
+            <div class="formGroup">
+                <label for="displayName">{{ 'user.displayName' | translate }}</label>
+                <input type="text" class="form-control" id="displayName" name="displayName"
+                    [(ngModel)]="user.displayName" />
+            </div>
+            <div class="formGroup">
+                <label for="password">{{ 'user.password' | translate }}</label>
+                <input type="text" class="form-control" id="password" name="password" [(ngModel)]="user.password" />
+            </div>
+            <div class="formGroup">
+                <label for="passwordConfirm">{{ 'user.passwordConfirm' | translate }}</label>
+                <input type="text" class="form-control" id="passwordConfirm" name="passwordConfirm"
+                    [(ngModel)]="user.passwordConfirm" />
+            </div>
+            <!-- Button Bar -->
+            <div class="formButtonBar">
+                <button type="button" class="btn-admin btn-primary" (click)="close()">{{ 'button.back' | translate
+                    }}</button>
+                <button type="submit" class="btn-admin btn-success">{{ 'button.save' | translate }}</button>
+            </div>
+            <!-- ...................................... -->
+        </div>
+    </form>
 </div>
-<form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="email">{{ 'user.email' | translate }}</label>
-        <input type="text" class="form-control" id="email" name="email" [(ngModel)]="user.email" />
-    </div>
-    <div class="form-group">
-        <label for="name">{{ 'user.name' | translate }}</label>
-        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.name" />
-    </div>
-    <div class="form-group">
-        <label for="displayName">{{ 'user.displayName' | translate }}</label>
-        <input type="text" class="form-control" id="displayName" name="displayName" [(ngModel)]="user.displayName" />
-    </div>
-    <div class="form-group">
-        <label for="password">{{ 'user.password' | translate }}</label>
-        <input type="text" class="form-control" id="password" name="password" [(ngModel)]="user.password" />
-    </div>
-    <div class="form-group">
-        <label for="passwordConfirm">{{ 'user.passwordConfirm' | translate }}</label>
-        <input type="text" class="form-control" id="passwordConfirm" name="passwordConfirm"
-            [(ngModel)]="user.passwordConfirm" />
-    </div>
-    <!-- Button Bar -->
-    <div class="button-bar">
-        <button type="submit" class="btn-admin btn-success">{{ 'button.save' | translate }}</button>
-        <button type="button" class="btn-admin btn-primary" (click)="close()">{{ 'button.back' | translate }}</button>
-    </div>
-</form>

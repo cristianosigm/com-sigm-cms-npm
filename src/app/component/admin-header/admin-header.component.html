@@ -1,1 +1,9 @@
-<p>admin-header works!</p>
+<div class="header">
+    <p>admin-header works!</p>
+    <nav aria-label="Main Menu">
+        <ul>
+            <li><a [routerLink]="['/signin']" routerLinkActive="/signin">signin</a></li>
+            <li><a [routerLink]="['/signup']" routerLinkActive="/signup">signup</a></li>
+        </ul>
+    </nav>
+</div>
