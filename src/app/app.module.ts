@@ -11,12 +11,13 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { AdminContentComponent } from './component/admin-content/admin-content.component';
 import { AdminHeaderComponent } from './component/admin-header/admin-header.component';
-import { AdminUsersComponent } from './component/admin-users/admin-users.component';
+import { AdminUserComponent } from './component/admin-user/admin-user.component';
 import { ContentComponent } from './component/content/content.component';
 import { HomeComponent } from './component/home/home.component';
 import { LoginComponent } from './component/login/login.component';
 import { PublicFooterComponent } from './component/public-footer/public-footer.component';
 import { SignupComponent } from './component/signup/signup.component';
+import { PwresetComponent } from './component/pwreset/pwreset.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,13 @@ import { SignupComponent } from './component/signup/signup.component';
     AdminComponent,
     AdminContentComponent,
     AdminHeaderComponent,
-    AdminUsersComponent,
+    AdminUserComponent,
     ContentComponent,
     HomeComponent,
     LoginComponent,
     PublicFooterComponent,
-    SignupComponent
+    SignupComponent,
+    PwresetComponent
   ],
   imports: [
     FormsModule,

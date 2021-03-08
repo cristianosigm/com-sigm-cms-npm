@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Signup } from '../model/signup';
 import { User } from '../model/user';
 
 @Injectable({ providedIn: 'root' })
@@ -19,8 +20,8 @@ export class UserService {
     return this.http.get(`${this.baseUrl}/single/${id}`);
   }
 
-  signup(user: User): Observable<any> {
-    return this.http.post(`${this.baseUrl}/signup`, user);
+  signup(signup: Signup): Observable<any> {
+    return this.http.post(`${this.baseUrl}/signup`, signup);
   }
 
   create(user: User): Observable<any> {

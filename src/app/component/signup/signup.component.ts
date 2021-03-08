@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from 'src/app/model/user';
+import { Signup } from 'src/app/model/signup';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -10,23 +10,30 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class SignupComponent implements OnInit {
 
-  user: User;
+  signup: Signup;
+
+  submited: boolean;
 
   constructor(private userService: UserService, private router: Router) {
-    this.user = new User();
+    this.signup = new Signup();
+    this.submited = false;
   }
 
   ngOnInit(): void { }
 
   onSubmit(): void {
+    this.submited = true;
     this.save();
     this.close();
   }
 
   save(): void {
-    this.userService.signup(this.user).subscribe(
+    // Username will be the user's email
+    this.signup.username = this.signup.email;
+
+    this.userService.signup(this.signup).subscribe(
       data => console.log('Successfully sent a new submission. Result: ' + data),
-      error => console.log(':: ERROR :: Failed to send a new submission. Details: ' + error),
+      error => console.log(':: ERROR :: Failed to send a new submission. Details: ' + error.message),
     );
   }
 

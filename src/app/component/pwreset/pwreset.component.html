@@ -1,0 +1,17 @@
+<div class="login">
+    <form (ngSubmit)="onSubmit()">
+        <div class="loginForm middleOnParent">
+            <!-- Form Content ......................... -->
+            <div>
+                <p class="alignCenter">{{ 'form.pwreset.message' | translate }}</p>
+                <p class="alignCenter"><input type="text" id="email" name="email"></p>
+            </div>
+            <!-- Button Bar -->
+            <div class="formButtonBar">
+                <button type="button" id="btn-home" [routerLink]="['/home']">{{ 'button.close' | translate }}</button>
+                <button type="submit">{{ 'button.submit' | translate }}</button>
+            </div>
+            <!-- ...................................... -->
+        </div>
+    </form>
+</div>

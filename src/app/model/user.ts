@@ -4,10 +4,6 @@ export class User {
     idRole: number;
     approved: boolean;
     blocked: boolean;
-    dateApproval!: Date;
-    dateBlocked!: Date;
-    dateLastLogin!: Date;
-    dateValidation!: Date;
     displayName: string;
     email: string;
     failedAttempts: number;
@@ -16,6 +12,8 @@ export class User {
     passwordConfirm: string;
     username: string;
     validated: boolean;
+
+    authdata!: string;
 
     constructor() {
         this.idRole = 0;

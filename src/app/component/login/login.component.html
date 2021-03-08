@@ -5,23 +5,23 @@
             <h1>{{ 'form.login.title' | translate }}</h1>
             <img src="../../../assets/img/login.jpg" alt="login" />
             <div class="formGroup">
-                <label for="username">{{ 'login.label.username' | translate }}</label>
-                <input type="text" id="username" name="username">
+                <label for="username">{{ 'user.username' | translate }}</label>
+                <input type="text" id="username" name="username" [(ngModel)]="login.username">
             </div>
             <div class="formGroup">
-                <label for="username">{{ 'login.label.password' | translate }}</label><input type="password"
-                    id="password" name="password">
+                <label for="username">{{ 'user.password' | translate }}</label>
+                <input type="password" id="password" name="password" [(ngModel)]="login.password">
             </div>
             <!-- Button Bar -->
             <div class="formButtonBar">
-                <button type="button" id="btn-home" [routerLink]="['/home']">{{ 'button.back' | translate }}</button>
+                <button type="button" id="btn-home" [routerLink]="['/home']">{{ 'button.close' | translate }}</button>
                 <button type="submit">{{ 'button.submit' | translate }}</button>
             </div>
             <div>
                 <p class="textSmall alignCenter">{{ 'form.login.txtreset' | translate }}<a
-                        [routerLink]="['/signup']">{{ 'form.login.txthere' | translate }}</a>!</p>
-                <p class="textSmall alignCenter">{{ 'form.login.txtsignup' | translate }}<a
-                        routerLink="/signup">{{ 'form.login.txthere' | translate }}</a>!</p>
+                        [routerLink]="['/pwreset']">{{ 'form.login.txthere' | translate }}</a>!</p>
+                <p class="textSmall alignCenter">{{ 'form.login.txtsignup' | translate }}<a routerLink="/signup">{{
+                        'form.login.txthere' | translate }}</a>!</p>
             </div>
             <!-- ...................................... -->
         </div>

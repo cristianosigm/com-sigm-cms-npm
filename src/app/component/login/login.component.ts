@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Login } from 'src/app/model/login';
+import { AuthenticationService } from 'src/app/security/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  login: Login;
+
+  submitted: boolean;
+
+  constructor(private authService: AuthenticationService, private router: Router) {
+    this.login = new Login();
+    this.submitted = false;
+  }
 
   ngOnInit(): void { }
 
   onSubmit(): void {
-    console.log('On submit');
+    this.submitted = true;
+    this.authService.login(this.login).subscribe(
+      user => {
+        console.log('Success');
+      },
+      error => {
+        console.log(':: ERROR :: Authentication failed: ' + error.message);
+      }
+    );
   }
 
 }
