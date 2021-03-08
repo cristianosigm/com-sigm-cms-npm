@@ -9,30 +9,32 @@ import { AppComponent } from './app.component';
 
 
 import { AdminComponent } from './component/admin/admin.component';
-import { AdminContentComponent } from './component/admin-content/admin-content.component';
 import { AdminHeaderComponent } from './component/admin-header/admin-header.component';
-import { AdminUserComponent } from './component/admin-user/admin-user.component';
-import { ContentComponent } from './component/content/content.component';
 import { HomeComponent } from './component/home/home.component';
 import { LoginComponent } from './component/login/login.component';
 import { PublicFooterComponent } from './component/public-footer/public-footer.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { PwresetComponent } from './component/pwreset/pwreset.component';
+import { ContentListComponent } from './component/content-list/content-list.component';
+import { UserListComponent } from './component/user-list/user-list.component';
+import { UserEditComponent } from './component/user-edit/user-edit.component';
+import { ContentEditComponent } from './component/content-edit/content-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
 
     AdminComponent,
-    AdminContentComponent,
     AdminHeaderComponent,
-    AdminUserComponent,
-    ContentComponent,
     HomeComponent,
     LoginComponent,
     PublicFooterComponent,
     SignupComponent,
-    PwresetComponent
+    PwresetComponent,
+    ContentListComponent,
+    UserListComponent,
+    UserEditComponent,
+    ContentEditComponent
   ],
   imports: [
     FormsModule,
