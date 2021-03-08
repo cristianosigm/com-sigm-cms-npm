@@ -1,9 +1,12 @@
 <div class="header">
     <p>admin-header works!</p>
-    <nav aria-label="Main Menu">
-        <ul>
-            <li><a [routerLink]="['/signin']" routerLinkActive="/signin">signin</a></li>
-            <li><a [routerLink]="['/signup']" routerLinkActive="/signup">signup</a></li>
-        </ul>
+    <nav>
+        <div>
+            <a [routerLink]="['/admin-user']" routerLinkActive="router-link-active">users
+            </a> | <a [routerLink]="['/admin-content']" routerLinkActive="router-link-active">contents
+            </a> | <a href="#" (click)="logout()">logout
+            </a>
+        </div>
     </nav>
+    <button type="button" (click)="logout()">logout</button>
 </div>

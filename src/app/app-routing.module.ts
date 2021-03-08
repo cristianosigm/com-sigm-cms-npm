@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminContentComponent } from './component/admin-content/admin-content.component';
 import { AdminUserComponent } from './component/admin-user/admin-user.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { HomeComponent } from './component/home/home.component';
@@ -17,7 +18,17 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
 
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuardService] },
-  { path: 'admin-user', component: AdminUserComponent, canActivate: [AuthGuardService], data: { roles: [Role.Administrator] } },
+  {
+    path: 'admin-content',
+    component: AdminContentComponent,
+    canActivate: [AuthGuardService], data: { roles: [Role.Standard, Role.Administrator] }
+  },
+  {
+    path: 'admin-user',
+    component: AdminUserComponent,
+    canActivate: [AuthGuardService],
+    data: { roles: [Role.Administrator] }
+  },
 
   // invalid paths goes to home page
   { path: '**', redirectTo: 'home' }

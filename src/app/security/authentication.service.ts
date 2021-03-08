@@ -39,11 +39,13 @@ export class AuthenticationService {
     }
 
     logout(): void {
+        // close session on the backend
+        this.http.post<any>(`${environment.apiUrl}/logout`, null);
         // remove user from local storage to log user out
         localStorage.removeItem('user');
         this.curUserSubject.next(new User());
-        this.router.navigate(['/login']);
         console.log('AuthenticationService: User removed successfully, current session cleaned.');
+        this.router.navigate(['/home']);
     }
 
 }

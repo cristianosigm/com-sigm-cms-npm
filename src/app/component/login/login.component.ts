@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
     this.authService.login(this.login).subscribe(
       user => {
-        console.log('Success');
+        this.onLoginSuccess();
       },
       error => {
         console.log(':: ERROR :: Authentication failed: ' + error.message);
@@ -33,4 +33,12 @@ export class LoginComponent implements OnInit {
     );
   }
 
+  onLoginSuccess(): void {
+    console.log('Login successful!');
+    this.router.navigate(['/admin']);
+  }
+
+  onLoginFailure(): void {
+    console.log('  login failed...  ');
+  }
 }
