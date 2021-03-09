@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { UserService } from 'src/app/service/user.service';
+import { User } from 'src/app/model/user';
 
 @Component({
   selector: 'app-user-list',
@@ -7,9 +11,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
 
-  constructor() { }
+  userList!: Observable<User[]>;
+
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
+    this.reload();
+  }
+
+  create(): void {
+
+  }
+
+  delete(): void {
+
+  }
+
+  update(id: number): void {
+
+  }
+
+  reload(): void {
+    this.userList = new Observable();
+    this.userList = this.userService.findAll();
   }
 
 }

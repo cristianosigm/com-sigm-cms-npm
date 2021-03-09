@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { AuthenticationService } from './authentication.service';
 
-
 @Injectable()
 export class BasicAuthInterceptor implements HttpInterceptor {
     constructor(private authenticationService: AuthenticationService) { }

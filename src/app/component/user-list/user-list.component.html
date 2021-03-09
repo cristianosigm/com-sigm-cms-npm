@@ -1,1 +1,37 @@
-<p>user-list works!</p>
+<app-admin-header></app-admin-header>
+<div class="content">
+    <!-- TOOLBAR ............................................. -->
+    <div class="toolbar">
+        <span>{{ 'title.prize.list' | translate }}</span>
+        <span class="floatRight">
+            <button type="button" class="btn-create" title="{{ 'button.create' | translate }}"
+                (click)="create()">new</button>
+        </span>
+    </div>
+    <!-- LIST TABLE .......................................... -->
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>role</th>
+                <th>validated</th>
+                <th>approved</th>
+                <th>blocked</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userList | async" (click)="update(user.id)">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.idRole }}</td>
+                <td>{{ user.validated }}</td>
+                <td>{{ user.approved }}</td>
+                <td>{{ user.blocked }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-public-footer></app-public-footer>

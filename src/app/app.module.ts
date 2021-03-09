@@ -17,8 +17,6 @@ import { SignupComponent } from './component/signup/signup.component';
 import { PwresetComponent } from './component/pwreset/pwreset.component';
 import { ContentListComponent } from './component/content-list/content-list.component';
 import { UserListComponent } from './component/user-list/user-list.component';
-import { UserEditComponent } from './component/user-edit/user-edit.component';
-import { ContentEditComponent } from './component/content-edit/content-edit.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +30,7 @@ import { ContentEditComponent } from './component/content-edit/content-edit.comp
     SignupComponent,
     PwresetComponent,
     ContentListComponent,
-    UserListComponent,
-    UserEditComponent,
-    ContentEditComponent
+    UserListComponent
   ],
   imports: [
     FormsModule,
