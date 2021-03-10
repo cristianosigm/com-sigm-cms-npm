@@ -4,6 +4,7 @@ import { AdminComponent } from './component/admin/admin.component';
 import { ContentListComponent } from './component/content-list/content-list.component';
 import { HomeComponent } from './component/home/home.component';
 import { LoginComponent } from './component/login/login.component';
+import { ProfileComponent } from './component/profile/profile.component';
 import { PwresetComponent } from './component/pwreset/pwreset.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { UserListComponent } from './component/user-list/user-list.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'pwreset', component: PwresetComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: 'signup', component: SignupComponent },
 
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuardService] },

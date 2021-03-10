@@ -9,7 +9,6 @@ export class ContentListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

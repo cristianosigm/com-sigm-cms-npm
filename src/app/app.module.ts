@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -17,11 +17,13 @@ import { SignupComponent } from './component/signup/signup.component';
 import { PwresetComponent } from './component/pwreset/pwreset.component';
 import { ContentListComponent } from './component/content-list/content-list.component';
 import { UserListComponent } from './component/user-list/user-list.component';
+import { ProfileComponent } from './component/profile/profile.component';
+// import { ErrorInterceptor } from './security/error.interceptor';
+import { AuthInterceptor } from './security/auth.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     AdminComponent,
     AdminHeaderComponent,
     HomeComponent,
@@ -30,7 +32,8 @@ import { UserListComponent } from './component/user-list/user-list.component';
     SignupComponent,
     PwresetComponent,
     ContentListComponent,
-    UserListComponent
+    UserListComponent,
+    ProfileComponent
   ],
   imports: [
     FormsModule,
@@ -46,7 +49,9 @@ import { UserListComponent } from './component/user-list/user-list.component';
     })
 
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

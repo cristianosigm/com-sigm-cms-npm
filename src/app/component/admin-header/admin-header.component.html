@@ -2,8 +2,10 @@
     <p>admin-header works!</p>
     <nav>
         <div>
-            <a [routerLink]="['/user-list']" routerLinkActive="router-link-active">users
+            <a [routerLink]="['/admin']" routerLinkActive="router-link-active">home
+            </a> | <a [routerLink]="['/user-list']" routerLinkActive="router-link-active">users
             </a> | <a [routerLink]="['/content-list']" routerLinkActive="router-link-active">contents
+            </a> | <a [routerLink]="['/profile']" routerLinkActive="router-link-active">profile
             </a> | <a href="#" (click)="logout()">logout
             </a>
         </div>

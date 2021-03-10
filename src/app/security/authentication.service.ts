@@ -22,6 +22,7 @@ export class AuthenticationService {
         let tempUser: any;
         // reads the current local storage to get the user from it, if its already saved.
         tempUser = localStorage.getItem(KEY_USER);
+        console.log('AuthenticationService: Current user is ' + tempUser);
         this.curUserSubject = new BehaviorSubject<User>(JSON.parse(tempUser));
         // this.curUser = this.curUserSubject.asObservable();
     }
