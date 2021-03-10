@@ -6,7 +6,6 @@ import { map } from 'rxjs/operators';
 import { User } from '../model/user';
 import { environment } from 'src/environments/environment';
 import { Login } from '../model/login';
-import { Role } from '../model/role';
 
 const KEY_NICK = 'nickname';
 const KEY_USER = 'user';
@@ -16,7 +15,6 @@ const KEY_ROLE = 'role';
 export class AuthenticationService {
 
     private curUserSubject: BehaviorSubject<User>;
-    // private curUser: Observable<User>;
 
     constructor(private router: Router, private http: HttpClient) {
         let tempUser: any;
@@ -24,7 +22,6 @@ export class AuthenticationService {
         tempUser = localStorage.getItem(KEY_USER);
         console.log('AuthenticationService: Current user is ' + tempUser);
         this.curUserSubject = new BehaviorSubject<User>(JSON.parse(tempUser));
-        // this.curUser = this.curUserSubject.asObservable();
     }
 
     public get curUserValue(): User {
@@ -38,12 +35,13 @@ export class AuthenticationService {
     }
 
     login(login: Login): Observable<User> {
-        return this.http.post<any>(`${environment.apiUrl}/login`, login)
+        return this.http.post<any>(`${environment.apiUrl}/account/login`, login)
             .pipe(map((user: User) => {
                 // store user details and basic auth credentials in local storage to keep user logged in between page refreshes
                 user.authdata = window.btoa(login.username + ':' + login.password);
                 localStorage.setItem(KEY_USER, JSON.stringify(user));
                 localStorage.setItem(KEY_ROLE, user.roleName);
+                localStorage.setItem(KEY_NICK, user.displayName);
                 this.curUserSubject.next(user);
                 console.log('AuthenticationService: User authenticated successfully and stored on current session.');
                 return user;

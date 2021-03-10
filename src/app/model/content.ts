@@ -1,4 +1,4 @@
-export class Post {
+export class Content {
 
     id!: number;
     idPicture: number;

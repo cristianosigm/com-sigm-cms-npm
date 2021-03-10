@@ -1,7 +1,32 @@
 <app-admin-header></app-admin-header>
 <div class="content">
-    <!-- content here ............................................................... -->
-    <h1>List: Content</h1>
-    <!-- ............................................................................ -->
+    <!-- TOOLBAR ............................................. -->
+    <div class="toolbar">
+        <span>{{ 'content.list.title' | translate }}</span>
+        <span class="floatRight">
+            <button type="button" class="btn-create" title="{{ 'button.create' | translate }}"
+                (click)="create()">new</button>
+        </span>
+    </div>
+    <!-- LIST TABLE .......................................... -->
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>idPicture</th>
+                <th>title</th>
+                <th>content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let content of contentList | async" (click)="update(content.id)">
+                <td>{{ content.id }}</td>
+                <td>{{ content.idPicture }}</td>
+                <td>{{ content.title }}</td>
+                <td>{{ content.content }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- ..................................................... -->
 </div>
 <app-public-footer></app-public-footer>
