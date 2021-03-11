@@ -20,6 +20,10 @@ import { UserListComponent } from './component/user-list/user-list.component';
 import { ProfileComponent } from './component/profile/profile.component';
 // import { ErrorInterceptor } from './security/error.interceptor';
 import { AuthInterceptor } from './security/auth.interceptor';
+import { ContentCreateComponent } from './component/content-create/content-create.component';
+import { ContentUpdateComponent } from './component/content-update/content-update.component';
+import { UserCreateComponent } from './component/user-create/user-create.component';
+import { UserUpdateComponent } from './component/user-update/user-update.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { AuthInterceptor } from './security/auth.interceptor';
     PwresetComponent,
     ContentListComponent,
     UserListComponent,
-    ProfileComponent
+    ProfileComponent,
+    ContentCreateComponent,
+    ContentUpdateComponent,
+    UserCreateComponent,
+    UserUpdateComponent
   ],
   imports: [
     FormsModule,

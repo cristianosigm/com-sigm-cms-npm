@@ -2,34 +2,34 @@
 <div class="content">
     <!-- TOOLBAR ............................................. -->
     <div class="toolbar">
-        <span>{{ 'title.prize.list' | translate }}</span>
+        <span>{{ 'form.user.list' | translate }}</span>
         <span class="floatRight">
-            <button type="button" class="btn-create" title="{{ 'button.create' | translate }}"
-                (click)="create()">new</button>
+            <button type="button" title="{{ 'button.create' | translate }}"
+                (click)="create()">{{ 'button.new' | translate }}</button>
         </span>
     </div>
     <!-- LIST TABLE .......................................... -->
     <table>
         <thead>
             <tr>
-                <th>id</th>
-                <th>name</th>
-                <th>email</th>
-                <th>role</th>
-                <th>validated</th>
-                <th>approved</th>
-                <th>blocked</th>
+                <th class="alignCenter">{{ 'user.id' | translate }}</th>
+                <th class="alignLeft">{{ 'user.name' | translate }}</th>
+                <th class="alignLeft">{{ 'user.email' | translate }}</th>
+                <th class="alignCenter">{{ 'user.idRole' | translate }}</th>
+                <th class="alignCenter">{{ 'user.validated' | translate }}</th>
+                <th class="alignCenter">{{ 'user.approved' | translate }}</th>
+                <th class="alignCenter">{{ 'user.blocked' | translate }}</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let user of userList | async" (click)="update(user.id)">
-                <td>{{ user.id }}</td>
-                <td>{{ user.name }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.idRole }}</td>
-                <td>{{ user.validated }}</td>
-                <td>{{ user.approved }}</td>
-                <td>{{ user.blocked }}</td>
+                <td class="alignCenter">{{ user.id }}</td>
+                <td class="alignLeft">{{ user.name }}</td>
+                <td class="alignLeft">{{ user.email }}</td>
+                <td class="alignCenter">{{ user.idRole }}</td>
+                <td class="alignCenter">{{ user.validated }}</td>
+                <td class="alignCenter">{{ user.approved }}</td>
+                <td class="alignCenter">{{ user.blocked }}</td>
             </tr>
         </tbody>
     </table>

@@ -13,27 +13,32 @@ export class UserListComponent implements OnInit {
 
   userList!: Observable<User[]>;
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private service: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.reload();
   }
 
   create(): void {
-
+    this.router.navigate(['/user-create']);
   }
 
-  delete(): void {
-
+  delete(id: number): void {
+    this.service.delete(id)
+      .subscribe(
+        () => console.log('Successfully deleted the user.'),
+        () => console.log(':: ERROR :: Failed to delete the user.')
+      );
+    this.reload();
   }
 
   update(id: number): void {
-
+    this.router.navigate(['/user-update', id]);
   }
 
   reload(): void {
-    this.userList = new Observable();
-    this.userList = this.userService.findAll();
+    this.userList = new Observable<User[]>();
+    this.userList = this.service.findAll();
   }
 
 }

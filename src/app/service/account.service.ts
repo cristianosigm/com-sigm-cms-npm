@@ -7,7 +7,7 @@ import { Signup } from '../model/signup';
 @Injectable({ providedIn: 'root' })
 export class AccountService {
 
-  private baseUrl = environment.apiUrl + '/account';
+  private baseUrl = environment.apiUrl + '/accounts';
 
   constructor(private http: HttpClient) { }
 

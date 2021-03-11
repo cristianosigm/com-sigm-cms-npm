@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Signup } from 'src/app/model/signup';
 import { AccountService } from 'src/app/service/account.service';
-import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -12,7 +11,6 @@ import { UserService } from 'src/app/service/user.service';
 export class SignupComponent implements OnInit {
 
   signup: Signup;
-
   submited: boolean;
 
   constructor(private service: AccountService, private router: Router) {
@@ -23,14 +21,18 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void { }
 
   onSubmit(): void {
-    this.submited = true;
+    // TODO: handle exception after POST and deal wuth the message using submited = true
+    // this.submited = true;
     this.save();
     this.close();
   }
 
   save(): void {
     this.service.signup(this.signup).subscribe(
-      data => console.log('Successfully sent a new submission. Result: ' + data),
+      data => {
+        console.log('Successfully sent a new submission. Result: ' + data);
+        // this.close();
+      },
       error => console.log(':: ERROR :: Failed to send a new submission. Details: ' + error.message),
     );
   }

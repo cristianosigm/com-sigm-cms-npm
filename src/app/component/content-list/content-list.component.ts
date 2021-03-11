@@ -20,15 +20,20 @@ export class ContentListComponent implements OnInit {
   }
 
   create(): void {
-
+    this.router.navigate(['/content-create']);
   }
 
-  delete(): void {
-
+  delete(id: number): void {
+    this.service.delete(id)
+      .subscribe(
+        () => console.log('Successfully deleted the content.'),
+        () => console.log(':: ERROR :: Failed to delete the content.')
+      );
+    this.reload();
   }
 
   update(id: number): void {
-
+    this.router.navigate(['/content-update', id]);
   }
 
   reload(): void {

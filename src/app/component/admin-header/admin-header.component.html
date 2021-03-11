@@ -1,11 +1,11 @@
 <div class="header">
     <nav>
         <div class="alignRight">
-            <a [routerLink]="['/admin']" routerLinkActive="router-link-active">home
-            </a> | <a [routerLink]="['/user-list']" routerLinkActive="router-link-active">users
-            </a> | <a [routerLink]="['/content-list']" routerLinkActive="router-link-active">contents
-            </a> | <a [routerLink]="['/profile']" routerLinkActive="router-link-active">profile
-            </a> | <a href="#" (click)="logout()">logout
+            <a [routerLink]="['/admin']" routerLinkActive="router-link-active">{{ 'menu.home' | translate }}
+            </a> | <a [routerLink]="['/user-list']" routerLinkActive="router-link-active">{{ 'menu.user' | translate }}
+            </a> | <a [routerLink]="['/content-list']" routerLinkActive="router-link-active">{{ 'menu.content' | translate }}
+            </a> | <a [routerLink]="['/profile']" routerLinkActive="router-link-active">{{ 'menu.profile' | translate }}
+            </a> | <a href="#" (click)="logout()">{{ 'menu.logout' | translate }}
             </a>
         </div>
     </nav>

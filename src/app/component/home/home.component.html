@@ -1,6 +1,7 @@
-<div class="header">
-    <div class="homeButton"><button type="button" id="btnLogin" [routerLink]="['/login']">{{ 'button.signin' | translate
-            }}</button></div>
+<div class="header alignRight">
+    <a [routerLink]="['/login']" routerLinkActive="router-link-active">{{ 'form.home.signin' | translate
+        }}
+    </a>
 </div>
 <div class="content">
     <h1>Home</h1>

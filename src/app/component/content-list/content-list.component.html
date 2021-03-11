@@ -2,28 +2,28 @@
 <div class="content">
     <!-- TOOLBAR ............................................. -->
     <div class="toolbar">
-        <span>{{ 'content.list.title' | translate }}</span>
+        <span>{{ 'form.content.list' | translate }}</span>
         <span class="floatRight">
-            <button type="button" class="btn-create" title="{{ 'button.create' | translate }}"
-                (click)="create()">new</button>
+            <button type="button" title="{{ 'button.create' | translate }}" (click)="create()">{{
+                'button.new' | translate }}</button>
         </span>
     </div>
     <!-- LIST TABLE .......................................... -->
     <table>
         <thead>
             <tr>
-                <th>id</th>
-                <th>idPicture</th>
-                <th>title</th>
-                <th>content</th>
+                <th class="alignCenter">{{ 'content.id' | translate }}</th>
+                <th class="alignLeft">{{ 'content.idPicture' | translate }}</th>
+                <th class="alignLeft">{{ 'content.title' | translate }}</th>
+                <th class="alignLeft">{{ 'content.content' | translate }}</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let content of contentList | async" (click)="update(content.id)">
-                <td>{{ content.id }}</td>
-                <td>{{ content.idPicture }}</td>
-                <td>{{ content.title }}</td>
-                <td>{{ content.content }}</td>
+                <td class="alignCenter">{{ content.id }}</td>
+                <td class="alignLeft">{{ content.idPicture }}</td>
+                <td class="alignLeft">{{ content.title }}</td>
+                <td class="alignLeft">{{ content.content }}</td>
             </tr>
         </tbody>
     </table>

@@ -1,32 +1,65 @@
 {
     "button": {
         "back": "Back",
+        "new": "New",
         "close": "Close",
         "save": "Save",
         "signin": "Sign in",
         "submit": "Submit"
     },
     "form": {
+        "home": {
+            "signin": "sign in"
+        },
+        "content": {
+            "list": "Contents",
+            "create": "New Content",
+            "update": "Edit Content"
+        },
         "login": {
             "title": "Sign in",
             "txthere": "here",
             "txtreset": "Can't remember your password? Click ",
             "txtsignup": "Don't have an account? Sign up "
         },
+        "profile": "Update Profile",
         "pwreset": {
             "message": "To reset your password, please enter your email.",
             "title": "Password Reset"
         },
         "signup": {
             "title": "Sign up"
+        },
+        "user": {
+            "list": "Users",
+            "create": "New User",
+            "update": "Edit User"
         }
     },
+    "menu": {
+        "home": "home",
+        "user": "users",
+        "content": "contents",
+        "profile": "my profile",
+        "logout": "logout"
+    },
+    "content": {
+        "id": "Id",
+        "idPicture": "Picture",
+        "title": "Title",
+        "content": "Content"
+    },
     "user": {
+        "id": "Id",
+        "idRole": "Role",
+        "approved": "Approved",
+        "blocked": "Blocked",
         "displayName": "Nickname",
         "email": "Email",
         "name": "Name",
         "password": "Password",
         "passwordConfirm": "Confirm Password",
-        "username": "Username"
+        "username": "Username",
+        "validated": "Validated"
     }
 }

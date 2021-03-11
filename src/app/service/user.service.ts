@@ -7,7 +7,7 @@ import { User } from '../model/user';
 @Injectable({ providedIn: 'root' })
 export class UserService {
 
-  private baseUrl = environment.apiUrl + '/user';
+  private baseUrl = environment.apiUrl + '/users';
 
   constructor(private http: HttpClient) { }
 
@@ -19,12 +19,14 @@ export class UserService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  create(user: User): Observable<any> {
-    return this.http.post(`${this.baseUrl}`, user);
-  }
-
-  update(user: User): Observable<any> {
-    return this.http.post(`${this.baseUrl}/update`, user);
+  save(user: User): Observable<any> {
+    if (user.id && user.id > 0) {
+      // updating existing user
+      return this.http.post(`${this.baseUrl}/update`, user);
+    } else {
+      // new user
+      return this.http.post(`${this.baseUrl}`, user);
+    }
   }
 
   delete(id: number): Observable<any> {

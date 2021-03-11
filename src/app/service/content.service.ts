@@ -7,7 +7,7 @@ import { Content } from 'src/app/model/content';
 @Injectable({ providedIn: 'root' })
 export class ContentService {
 
-  private baseUrl = environment.apiUrl + '/content';
+  private baseUrl = environment.apiUrl + '/contents';
 
   constructor(private http: HttpClient) { }
 
