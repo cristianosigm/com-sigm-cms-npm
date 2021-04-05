@@ -19,14 +19,12 @@ export class UserService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  save(user: User): Observable<any> {
-    if (user.id && user.id > 0) {
-      // updating existing user
-      return this.http.post(`${this.baseUrl}/update`, user);
-    } else {
-      // new user
-      return this.http.post(`${this.baseUrl}`, user);
-    }
+  create(user: User): Observable<any> {
+    return this.http.post(`${this.baseUrl}`, user);
+  }
+
+  update(user: User): Observable<any> {
+    return this.http.post(`${this.baseUrl}/update`, user);
   }
 
   delete(id: number): Observable<any> {

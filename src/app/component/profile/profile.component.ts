@@ -44,7 +44,7 @@ export class ProfileComponent implements OnInit {
   }
 
   save(): void {
-    this.service.save(this.user).subscribe(
+    this.service.update(this.user).subscribe(
       data => {
         console.log('Successfully updated the user profile. Result: ' + data);
         // this.close();

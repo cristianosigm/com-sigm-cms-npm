@@ -13,7 +13,7 @@ export class SignupComponent implements OnInit {
   signup: Signup;
   submited: boolean;
 
-  constructor(private service: AccountService, private router: Router) {
+  constructor(private accountService: AccountService, private router: Router) {
     this.signup = new Signup();
     this.submited = false;
   }
@@ -28,11 +28,11 @@ export class SignupComponent implements OnInit {
   }
 
   save(): void {
-    this.service.signup(this.signup).subscribe(
-      data => {
-        console.log('Successfully sent a new submission. Result: ' + data);
-        // this.close();
-      },
+    // Username will be the user's email
+    // this.signup.username = this.signup.email;
+
+    this.accountService.signup(this.signup).subscribe(
+      data => console.log('Successfully sent a new submission. Result: ' + data),
       error => console.log(':: ERROR :: Failed to send a new submission. Details: ' + error.message),
     );
   }

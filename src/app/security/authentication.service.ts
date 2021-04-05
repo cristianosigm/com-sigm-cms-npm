@@ -50,7 +50,7 @@ export class AuthenticationService {
 
     logout(): void {
         // close session on the backend
-        this.http.post<any>(`${environment.apiUrl}/logout`, null);
+        this.http.post<any>(`${environment.apiUrl}/accounts/logout`, null);
         // remove user from local storage to log user out
         localStorage.removeItem(KEY_USER);
         localStorage.removeItem(KEY_ROLE);
