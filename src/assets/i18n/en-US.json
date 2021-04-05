@@ -1,0 +1,32 @@
+{
+    "button": {
+        "back": "Back",
+        "close": "Close",
+        "save": "Save",
+        "signin": "Sign in",
+        "submit": "Submit"
+    },
+    "form": {
+        "login": {
+            "title": "Sign in",
+            "txthere": "here",
+            "txtreset": "Can't remember your password? Click ",
+            "txtsignup": "Don't have an account? Sign up "
+        },
+        "pwreset": {
+            "message": "To reset your password, please enter your email.",
+            "title": "Password Reset"
+        },
+        "signup": {
+            "title": "Sign up"
+        }
+    },
+    "user": {
+        "displayName": "Nickname",
+        "email": "Email",
+        "name": "Name",
+        "password": "Password",
+        "passwordConfirm": "Confirm Password",
+        "username": "Username"
+    }
+}

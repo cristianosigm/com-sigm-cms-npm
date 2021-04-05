@@ -1,0 +1,40 @@
+<div class="login">
+    <form (ngSubmit)="onSubmit()">
+        <div [hidden]="submited" class="loginForm middleOnParent">
+            <!-- Form Content ......................... -->
+            <h1>{{ 'form.signup.title' | translate }}</h1>
+            <div class="formGroup">
+                <label for="email">{{ 'user.email' | translate }}</label>
+                <input type="text" class="form-control" id="email" name="email" [(ngModel)]="signup.email" />
+            </div>
+            <div class="formGroup">
+                <label for="name">{{ 'user.name' | translate }}</label>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="signup.name" />
+            </div>
+            <div class="formGroup">
+                <label for="displayName">{{ 'user.displayName' | translate }}</label>
+                <input type="text" class="form-control" id="displayName" name="displayName"
+                    [(ngModel)]="signup.displayName" />
+            </div>
+            <div class="formGroup">
+                <label for="password">{{ 'user.password' | translate }}</label>
+                <input type="text" class="form-control" id="password" name="password" [(ngModel)]="signup.password" />
+            </div>
+            <div class="formGroup">
+                <label for="passwordConfirm">{{ 'user.passwordConfirm' | translate }}</label>
+                <input type="text" class="form-control" id="passwordConfirm" name="passwordConfirm"
+                    [(ngModel)]="signup.passwordConfirm" />
+            </div>
+            <!-- Button Bar -->
+            <div class="formButtonBar">
+                <button type="button" class="btn-admin btn-primary" (click)="close()">{{ 'button.close' | translate
+                    }}</button>
+                <button type="submit" class="btn-admin btn-success">{{ 'button.save' | translate }}</button>
+            </div>
+            <!-- ...................................... -->
+        </div>
+    </form>
+    <div [hidden]="!submited" class="msgDisplay middleOnParent">
+        Mensagem!
+    </div>
+</div>
