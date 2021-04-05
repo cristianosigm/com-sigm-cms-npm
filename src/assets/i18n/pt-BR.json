@@ -1,29 +1,65 @@
 {
     "button": {
         "back": "Voltar",
+        "new": "Novo",
+        "close": "Fechar",
         "save": "Salvar",
-        "signin": "Login",
+        "signin": "Acessar",
         "submit": "Enviar"
     },
     "form": {
+        "home": {
+            "signin": "área restrita"
+        },
+        "content": {
+            "list": "Conteúdos",
+            "create": "Novo Conteúdo",
+            "update": "Editar Conteúdo"
+        },
         "login": {
-            "title": "Acesse sua conta",
+            "title": "Seu acesso",
+            "txthere": "aqui",
             "txtreset": "Esqueceu sua senha? Clique ",
-            "txtsignup": "Não tem uma conta? Cadastre-se ",
-            "txthere": "aqui"
+            "txtsignup": "Não tem uma conta? Cadastre-se "
+        },
+        "profile": "Atualizar Perfil",
+        "pwreset": {
+            "message": "Para redefinir sua senha, informe seu e-mail abaixo.",
+            "title": "Redefinir senha"
+        },
+        "signup": {
+            "title": "Cadastre-se"
+        },
+        "user": {
+            "list": "Usuários",
+            "create": "Novo Usuário",
+            "update": "Editar Usuário"
         }
     },
-    "login": {
-        "label": {
-            "username": "Usuário:",
-            "password": "Senha:"
-        }
+    "menu": {
+        "home": "início",
+        "user": "usuários",
+        "content": "conteúdos",
+        "profile": "meus dados",
+        "logout": "sair"
+    },
+    "content": {
+        "id": "Id",
+        "idPicture": "Imagem",
+        "title": "Título",
+        "content": "Conteúdo"
     },
     "user": {
+        "id": "Id",
+        "idRole": "Perfil",
+        "approved": "Aprovado",
+        "blocked": "Bloqueado",
+        "displayName": "Apelido",
         "email": "Email",
         "name": "Nome",
-        "displayName": "Apelido",
         "password": "Senha",
-        "passwordConfirm": "Confirmar Senha"
+        "passwordConfirm": "Confirmar Senha",
+        "username": "Usuário",
+        "validated": "Validado"
     }
 }

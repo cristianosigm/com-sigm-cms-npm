@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -9,30 +9,39 @@ import { AppComponent } from './app.component';
 
 
 import { AdminComponent } from './component/admin/admin.component';
-import { AdminContentComponent } from './component/admin-content/admin-content.component';
 import { AdminHeaderComponent } from './component/admin-header/admin-header.component';
-import { AdminUserComponent } from './component/admin-user/admin-user.component';
-import { ContentComponent } from './component/content/content.component';
 import { HomeComponent } from './component/home/home.component';
 import { LoginComponent } from './component/login/login.component';
 import { PublicFooterComponent } from './component/public-footer/public-footer.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { PwresetComponent } from './component/pwreset/pwreset.component';
+import { ContentListComponent } from './component/content-list/content-list.component';
+import { UserListComponent } from './component/user-list/user-list.component';
+import { ProfileComponent } from './component/profile/profile.component';
+// import { ErrorInterceptor } from './security/error.interceptor';
+import { AuthInterceptor } from './security/auth.interceptor';
+import { ContentCreateComponent } from './component/content-create/content-create.component';
+import { ContentUpdateComponent } from './component/content-update/content-update.component';
+import { UserCreateComponent } from './component/user-create/user-create.component';
+import { UserUpdateComponent } from './component/user-update/user-update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     AdminComponent,
-    AdminContentComponent,
     AdminHeaderComponent,
-    AdminUserComponent,
-    ContentComponent,
     HomeComponent,
     LoginComponent,
     PublicFooterComponent,
     SignupComponent,
-    PwresetComponent
+    PwresetComponent,
+    ContentListComponent,
+    UserListComponent,
+    ProfileComponent,
+    ContentCreateComponent,
+    ContentUpdateComponent,
+    UserCreateComponent,
+    UserUpdateComponent
   ],
   imports: [
     FormsModule,
@@ -48,7 +57,9 @@ import { PwresetComponent } from './component/pwreset/pwreset.component';
     })
 
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,37 @@
+<app-admin-header></app-admin-header>
+<div class="content">
+    <!-- TOOLBAR ............................................. -->
+    <div class="toolbar">
+        <span>{{ 'form.user.list' | translate }}</span>
+        <span class="floatRight">
+            <button type="button" title="{{ 'button.create' | translate }}"
+                (click)="create()">{{ 'button.new' | translate }}</button>
+        </span>
+    </div>
+    <!-- LIST TABLE .......................................... -->
+    <table>
+        <thead>
+            <tr>
+                <th class="alignCenter">{{ 'user.id' | translate }}</th>
+                <th class="alignLeft">{{ 'user.name' | translate }}</th>
+                <th class="alignLeft">{{ 'user.email' | translate }}</th>
+                <th class="alignCenter">{{ 'user.idRole' | translate }}</th>
+                <th class="alignCenter">{{ 'user.validated' | translate }}</th>
+                <th class="alignCenter">{{ 'user.approved' | translate }}</th>
+                <th class="alignCenter">{{ 'user.blocked' | translate }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userList | async" (click)="update(user.id)">
+                <td class="alignCenter">{{ user.id }}</td>
+                <td class="alignLeft">{{ user.name }}</td>
+                <td class="alignLeft">{{ user.email }}</td>
+                <td class="alignCenter">{{ user.idRole }}</td>
+                <td class="alignCenter">{{ user.validated }}</td>
+                <td class="alignCenter">{{ user.approved }}</td>
+                <td class="alignCenter">{{ user.blocked }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-public-footer></app-public-footer>
