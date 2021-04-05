@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Signup } from 'src/app/model/signup';
-import { UserService } from 'src/app/service/user.service';
+import { AccountService } from 'src/app/service/account.service';
 
 @Component({
   selector: 'app-signup',
@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
 
   submited: boolean;
 
-  constructor(private userService: UserService, private router: Router) {
+  constructor(private accountService: AccountService, private router: Router) {
     this.signup = new Signup();
     this.submited = false;
   }
@@ -31,7 +31,7 @@ export class SignupComponent implements OnInit {
     // Username will be the user's email
     this.signup.username = this.signup.email;
 
-    this.userService.signup(this.signup).subscribe(
+    this.accountService.signup(this.signup).subscribe(
       data => console.log('Successfully sent a new submission. Result: ' + data),
       error => console.log(':: ERROR :: Failed to send a new submission. Details: ' + error.message),
     );
