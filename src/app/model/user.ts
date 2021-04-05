@@ -10,13 +10,14 @@ export class User {
     name: string;
     password: string;
     passwordConfirm: string;
+    roleName: string;
     username: string;
     validated: boolean;
 
     authdata!: string;
 
     constructor() {
-        this.idRole = 0;
+        this.idRole = 1;
         this.approved = false;
         this.blocked = false;
         this.displayName = '';
@@ -25,6 +26,7 @@ export class User {
         this.name = '';
         this.password = '';
         this.passwordConfirm = '';
+        this.roleName = '';
         this.username = '';
         this.validated = false;
     }

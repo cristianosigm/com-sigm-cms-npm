@@ -1,24 +1,24 @@
 // base colors
-$color-content-base: dimgray;
-$color-link: #262944;
-$color-link-hover: #5a67da;
+$color-content-base: rgb(45, 75, 41);
+$color-link: #1d6128;
+$color-link-hover: #35da51;
 
 // button
-$color-button-bg: #9090e5;
-$color-button-bg-hover: white;
-$color-button-fg: white;
-$color-button-fg-hover: #9090e5;
-$color-button-border: gray;
+$color-button-bg: #56df61;
+$color-button-bg-hover: #7cfc86;
+$color-button-fg: green;
+$color-button-fg-hover: dimgray;
+$color-button-border: rgb(106, 139, 109);
 $color-button-border-hover: gray;
 
-$color-button-neutral-bg: #cfcfcf;
+$color-button-neutral-bg: #d6dfd5;
 $color-button-neutral-bg-hover: rgb(230, 230, 230);
 $color-button-neutral-fg: dimgray;
 $color-button-warning-bg: #9090e5;
 $color-button-warning-bg-hover: white;
 
 // header
-$color-header-bg: #9090e5;
+$color-header-bg: #4e9e54;
 $color-header-shadow: gray;
 $color-header-text: white;
 
@@ -30,10 +30,10 @@ $color-form-readonly-bg: lightgray;
 $color-form-readonly-fg: gray;
 
 // lists
-$color-list-header-bg: #9090e5;
+$color-list-header-bg: #5cad75;
 $color-list-header-fg: white;
-$color-list-row-bg: #c0c0ff;
-$color-list-row-bg-hover: #cfcffc;
+$color-list-row-bg: #c0ffc3;
+$color-list-row-bg-hover: #d3fccf;
 $color-list-row-fg: black;
 $color-list-row-fg-hover: black;
 $color-list-row-border: white;
