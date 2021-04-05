@@ -44,7 +44,7 @@ export class UserUpdateComponent implements OnInit {
   }
 
   save(): void {
-    this.service.save(this.user).subscribe(
+    this.service.update(this.user).subscribe(
       data => {
         console.log('Successfully sent a new user. Result: ' + data);
         // this.close();

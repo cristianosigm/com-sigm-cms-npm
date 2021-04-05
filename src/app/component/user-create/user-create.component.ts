@@ -28,7 +28,7 @@ export class UserCreateComponent implements OnInit {
   }
 
   save(): void {
-    this.service.save(this.user).subscribe(
+    this.service.create(this.user).subscribe(
       data => {
         console.log('Successfully sent a new user. Result: ' + data);
         // this.close();
