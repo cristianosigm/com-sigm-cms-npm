@@ -2,13 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Signup } from '../model/signup';
 import { User } from '../model/user';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
 
-  private baseUrl = environment.apiUrl + '/user';
+  private baseUrl = environment.apiUrl + '/users';
 
   constructor(private http: HttpClient) { }
 
@@ -17,11 +16,7 @@ export class UserService {
   }
 
   findSingle(id: number): Observable<any> {
-    return this.http.get(`${this.baseUrl}/single/${id}`);
-  }
-
-  signup(signup: Signup): Observable<any> {
-    return this.http.post(`${this.baseUrl}/signup`, signup);
+    return this.http.get(`${this.baseUrl}/${id}`);
   }
 
   create(user: User): Observable<any> {

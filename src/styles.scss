@@ -7,7 +7,12 @@
 }
 
 .content {
-  padding: 20pt;
+  // padding: 20pt;
+  margin: 0 auto;
+  max-width: 600pt;
+  min-width: 260pt;
+  position: relative;
+
 }
 
 .header {
@@ -37,12 +42,17 @@ html {
 
 a {
   color: $color-link;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $color-link-hover;  
 }
 
 button {
   background-color: $color-button-bg;
   border: solid 1px $color-button-border;
-  color: $color-button-text;
+  color: $color-button-fg;
   font-size: x-small;
   margin: 2pt;
   padding: 8pt 0;
@@ -52,15 +62,17 @@ button {
 button:hover {
   background-color: $color-button-bg-hover;
   border: solid 1px $color-button-border-hover;
-  color: $color-button-text-hover;
+  color: $color-button-fg-hover;
 }
 
 h1 {
   margin: 10pt 0;
+  font-size: x-large;
 }
 
 h2 {
   margin: 8pt 0;
+  font-size: large;
 }
 
 p {
@@ -82,48 +94,119 @@ p {
   width: 100%;
 }
 
+// for desktop only
 .loginForm {
   background-color: white;
   border: none;
   box-shadow: 0px 0px 8px 2px gray;
   font-size: small;
-  padding: 20pt;
+  padding: 10pt;
   text-align: center;
-  width: 300pt;
+  width: 400pt;
 }
 
 .loginForm p {
   margin: 5pt;
 }
 
-.textSmall {
-  font-size: x-small;
-  padding: 4pt;
-}
-
 // ------------------------------------------------------------------------
 // forms
 // ------------------------------------------------------------------------
 
+.buttonNeutral {
+  background-color: $color-button-neutral-bg;
+  color: $color-button-neutral-fg;
+}
+
+.buttonNeutral:hover {
+  background-color: $color-button-neutral-bg-hover;
+}
+
+.formArea {
+  margin: 0 auto;
+  max-width: 300pt;
+  min-width: 260pt;
+  position: relative;
+}
+
 .formButtonBar {
+  position: relative;
+  margin: 0 auto;
   padding: 14pt 0;
+  text-align: center;
 }
 
 .formGroup {
   padding: 8pt 0;
 }
 
+.readonly {
+  background-color: $color-form-readonly-bg;
+  color: $color-form-readonly-fg;
+}
+
 input {
   border: solid 1px #A0A0A0;
   color: #A0A0A0;
+  font-size: small;
   padding: 5pt;
 }
 
 label {
   display: inline-block;
-  padding: 4pt;
-  text-align: left;
-  width: 90pt;
+  font-size: small;
+  padding: 4pt 8pt 4pt 0;
+  text-align: right;
+  width: 130pt;
+}
+
+// ------------------------------------------------------------------------
+// lists
+// ------------------------------------------------------------------------
+
+.floatRight {
+  float: right;
+  margin: -5pt 0;
+}
+
+.toolbar {
+  border: none;
+  font-weight: bold;
+  font-size: x-large;
+  display: inline-block;
+  margin: 10pt 0;
+  padding: 5pt 0;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table tr {
+  background-color: $color-list-row-bg;
+  border: solid 1px $color-list-row-border;
+}
+
+table tr th {
+  background-color: $color-list-header-bg;
+  color: $color-list-header-fg;
+  font-size: small;
+  font-weight: normal;
+  padding: 4pt 2pt;
+}
+
+table tr:hover {
+  background-color: $color-list-row-bg-hover;
+  color: $color-list-row-fg-hover;
+}
+
+table tr td {
+  color: $color-list-row-fg;
+  font-size: small;
+  font-weight: normal;
+  padding: 4pt 2pt;
 }
 
 // ------------------------------------------------------------------------
@@ -156,4 +239,9 @@ label {
 
 .alignJustify {
   text-align: justify;
+}
+
+.textSmall {
+  font-size: x-small;
+  padding: 4pt;
 }

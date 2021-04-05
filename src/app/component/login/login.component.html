@@ -14,9 +14,10 @@
             </div>
             <!-- Button Bar -->
             <div class="formButtonBar">
-                <button type="button" id="btn-home" [routerLink]="['/home']">{{ 'button.close' | translate }}</button>
                 <button type="submit">{{ 'button.submit' | translate }}</button>
+                <button type="button" class="buttonNeutral" id="btn-home" [routerLink]="['/home']">{{ 'button.close' | translate }}</button>
             </div>
+            <!-- Reset and Signup links -->
             <div>
                 <p class="textSmall alignCenter">{{ 'form.login.txtreset' | translate }}<a
                         [routerLink]="['/pwreset']">{{ 'form.login.txthere' | translate }}</a>!</p>

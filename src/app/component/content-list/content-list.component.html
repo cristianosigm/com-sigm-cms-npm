@@ -1,0 +1,32 @@
+<app-admin-header></app-admin-header>
+<div class="content">
+    <!-- TOOLBAR ............................................. -->
+    <div class="toolbar">
+        <span>{{ 'form.content.list' | translate }}</span>
+        <span class="floatRight">
+            <button type="button" title="{{ 'button.create' | translate }}" (click)="create()">{{
+                'button.new' | translate }}</button>
+        </span>
+    </div>
+    <!-- LIST TABLE .......................................... -->
+    <table>
+        <thead>
+            <tr>
+                <th class="alignCenter">{{ 'content.id' | translate }}</th>
+                <th class="alignLeft">{{ 'content.idPicture' | translate }}</th>
+                <th class="alignLeft">{{ 'content.title' | translate }}</th>
+                <th class="alignLeft">{{ 'content.content' | translate }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let content of contentList | async" (click)="update(content.id)">
+                <td class="alignCenter">{{ content.id }}</td>
+                <td class="alignLeft">{{ content.idPicture }}</td>
+                <td class="alignLeft">{{ content.title }}</td>
+                <td class="alignLeft">{{ content.content }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- ..................................................... -->
+</div>
+<app-public-footer></app-public-footer>

@@ -1,0 +1,32 @@
+<app-admin-header></app-admin-header>
+<div class="content">
+    <form (ngSubmit)="onSubmit()">
+        <div [hidden]="submited" class="formArea">
+            <!-- Form Content ......................... -->
+            <h1 class="alignCenter">{{ 'form.content.update' | translate }}</h1>
+            <div class="formGroup">
+                <label for="idContent">{{ 'content.id' | translate }}</label>
+                <input type="text" class="readonly" id="idContent" name="idContent" [(ngModel)]="content.id" DISABLED />
+            </div>
+            <div class="formGroup">
+                <label for="title">{{ 'content.title' | translate }}</label>
+                <input type="text" id="title" name="title" [(ngModel)]="content.title" />
+            </div>
+            <div class="formGroup">
+                <label for="content">{{ 'content.content' | translate }}</label>
+                <input type="text" id="content" name="content" [(ngModel)]="content.content" />
+            </div>
+            <!-- Button Bar -->
+            <div class="formButtonBar">
+                <button type="submit">{{ 'button.save' | translate }}</button>
+                <button type="button" class="buttonNeutral" (click)="close()">{{ 'button.close' | translate
+                    }}</button>
+            </div>
+            <!-- ...................................... -->
+        </div>
+    </form>
+    <div [hidden]="!submited" class="msgDisplay middleOnParent">
+        Mensagem!
+    </div>
+</div>
+<app-public-footer></app-public-footer>
