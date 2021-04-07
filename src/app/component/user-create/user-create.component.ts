@@ -33,7 +33,7 @@ export class UserCreateComponent implements OnInit {
         console.log('Successfully sent a new user. Result: ' + data);
         // this.close();
       },
-      error => console.log(':: ERROR :: Failed to send a new user. Details: ' + error.message),
+      error => console.log(':: ERROR :: Failed to send a new user. Details: ' + error.message)
     );
   }
 

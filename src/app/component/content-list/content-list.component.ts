@@ -37,7 +37,7 @@ export class ContentListComponent implements OnInit {
   }
 
   reload(): void {
-    this.contentList = new Observable();
+    this.contentList = new Observable<Content[]>();
     this.contentList = this.service.findAll();
   }
 

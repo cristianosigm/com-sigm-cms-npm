@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { UserService } from 'src/app/service/user.service';
 import { User } from 'src/app/model/user';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-user-list',
@@ -37,7 +37,7 @@ export class UserListComponent implements OnInit {
   }
 
   reload(): void {
-    this.userList = new Observable<User[]>();
+    this.userList = new Observable<User[]>();;
     this.userList = this.service.findAll();
   }
 
