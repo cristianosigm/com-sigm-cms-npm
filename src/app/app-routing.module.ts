@@ -6,7 +6,6 @@ import { ContentCreateComponent } from './component/content-create/content-creat
 import { HomeComponent } from './component/home/home.component';
 import { LoginComponent } from './component/login/login.component';
 import { ProfileComponent } from './component/profile/profile.component';
-import { PwresetComponent } from './component/pwreset/pwreset.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { UserListComponent } from './component/user-list/user-list.component';
 import { UserCreateComponent } from './component/user-create/user-create.component';
@@ -14,13 +13,16 @@ import { Role } from './model/role';
 import { AuthGuardService } from './security/auth-guard.service';
 import { ContentUpdateComponent } from './component/content-update/content-update.component';
 import { UserUpdateComponent } from './component/user-update/user-update.component';
+import { ResetRequestComponent } from './component/reset-request/reset-request.component';
+import { ResetFormComponent } from './component/reset-form/reset-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   // public areas
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'pwreset', component: PwresetComponent },
+  { path: 'reset-request', component: ResetRequestComponent },
+  { path: 'reset-form/:email/:key', component: ResetFormComponent },
   { path: 'signup', component: SignupComponent },
   // restricted areas
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuardService] },

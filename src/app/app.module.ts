@@ -14,7 +14,6 @@ import { HomeComponent } from './component/home/home.component';
 import { LoginComponent } from './component/login/login.component';
 import { PublicFooterComponent } from './component/public-footer/public-footer.component';
 import { SignupComponent } from './component/signup/signup.component';
-import { PwresetComponent } from './component/pwreset/pwreset.component';
 import { ContentListComponent } from './component/content-list/content-list.component';
 import { UserListComponent } from './component/user-list/user-list.component';
 import { ProfileComponent } from './component/profile/profile.component';
@@ -24,6 +23,9 @@ import { ContentCreateComponent } from './component/content-create/content-creat
 import { ContentUpdateComponent } from './component/content-update/content-update.component';
 import { UserCreateComponent } from './component/user-create/user-create.component';
 import { UserUpdateComponent } from './component/user-update/user-update.component';
+import { ResetRequestComponent } from './component/reset-request/reset-request.component';
+import { ResetFormComponent } from './component/reset-form/reset-form.component';
+
 
 @NgModule({
   declarations: [
@@ -34,14 +36,16 @@ import { UserUpdateComponent } from './component/user-update/user-update.compone
     LoginComponent,
     PublicFooterComponent,
     SignupComponent,
-    PwresetComponent,
+    ResetRequestComponent,
     ContentListComponent,
     UserListComponent,
     ProfileComponent,
     ContentCreateComponent,
     ContentUpdateComponent,
     UserCreateComponent,
-    UserUpdateComponent
+    UserUpdateComponent,
+    ResetRequestComponent,
+    ResetFormComponent
   ],
   imports: [
     FormsModule,

@@ -46,6 +46,7 @@ export class ProfileComponent implements OnInit {
   save(): void {
     this.service.update(this.user).subscribe(
       data => {
+        // TODO: AFTER SUCCESSFULLY CHANGE PASSWORD, FORCE A LOGOUT!
         console.log('Successfully updated the user profile. Result: ' + data);
         // this.close();
       },
@@ -57,5 +58,12 @@ export class ProfileComponent implements OnInit {
     this.router.navigate(['/admin']);
   }
 
+  onChangePassword(): void {
+    if (!this.user.changePassword) {
+      this.user.currentPassword = '';
+      this.user.password = '';
+      this.user.passwordConfirm = '';
+    }
+  }
 
 }

@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { AccountService } from 'src/app/service/account.service';
 
 @Component({
-  selector: 'app-pwreset',
-  templateUrl: './pwreset.component.html',
-  styleUrls: ['./pwreset.component.scss']
+  selector: 'app-reset-request',
+  templateUrl: './reset-request.component.html',
+  styleUrls: ['./reset-request.component.scss']
 })
-export class PwresetComponent implements OnInit {
+export class ResetRequestComponent implements OnInit {
 
   email!: string;
 
@@ -21,7 +21,7 @@ export class PwresetComponent implements OnInit {
   }
 
   save(): void {
-    this.service.reset(this.email).subscribe(
+    this.service.resetRequest(this.email).subscribe(
       data => {
         console.log('Successfully sent a new password reset request. Result: ' + data);
       },
@@ -33,7 +33,7 @@ export class PwresetComponent implements OnInit {
 
   close(): void {
     // TODO: navigate to a Message page, passing the message to be displayed
-    this.router.navigate(['/content-list']);
+    this.router.navigate(['/home']);
   }
 
 }

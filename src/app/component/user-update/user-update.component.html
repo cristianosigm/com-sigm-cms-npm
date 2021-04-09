@@ -9,6 +9,10 @@
                 <input type="text" class="readonly" id="idUser" name="idUser" [(ngModel)]="user.id" DISABLED />
             </div>
             <div class="formGroup">
+                <label for="email">{{ 'user.email' | translate }}</label>
+                <input type="text" class="readonly" id="email" name="email" [(ngModel)]="user.email" DISABLED />
+            </div>
+            <div class="formGroup">
                 <label for="name">{{ 'user.name' | translate }}</label>
                 <input type="text" id="name" name="name" [(ngModel)]="user.name" />
             </div>
@@ -17,10 +21,6 @@
                 <input type="text" id="displayName" name="displayName" [(ngModel)]="user.displayName" />
             </div>
             <!-- UPDATE API does not allow password or email change
-            <div class="formGroup">
-                <label for="email">{{ 'user.email' | translate }}</label>
-                <input type="text" class="readonly" id="email" name="email" [(ngModel)]="user.email" DISABLED />
-            </div>
             <div class="formGroup">
                 <label for="password">{{ 'user.password' | translate }}</label>
                 <input type="text" id="password" name="password" [(ngModel)]="user.password" />

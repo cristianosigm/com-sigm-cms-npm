@@ -23,9 +23,11 @@
             "txtsignup": "Don't have an account? Sign up "
         },
         "profile": "Update Profile",
-        "pwreset": {
+        "reset": {
             "message": "To reset your password, please enter your email.",
-            "title": "Password Reset"
+            "title": "Password Reset",
+            "confirmTitle": "New Password",
+            "confirmInstructions": "Please type your new password."
         },
         "signup": {
             "title": "Sign up"
@@ -54,10 +56,12 @@
         "idRole": "Role",
         "approved": "Approved",
         "blocked": "Blocked",
+        "changePassword": "Change Password",
+        "currentPassword": "Current Password",
         "displayName": "Nickname",
         "email": "Email",
         "name": "Name",
-        "password": "Password",
+        "password": "New Password",
         "passwordConfirm": "Confirm Password",
         "username": "Username",
         "validated": "Validated"

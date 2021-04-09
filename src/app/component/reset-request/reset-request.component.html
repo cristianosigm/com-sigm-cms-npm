@@ -3,13 +3,14 @@
         <div class="loginForm middleOnParent">
             <!-- Form Content ......................... -->
             <div>
-                <p class="alignCenter">{{ 'form.pwreset.message' | translate }}</p>
-                <p class="alignCenter"><input type="text" id="email" name="email"></p>
+                <p class="alignCenter">{{ 'form.reset.message' | translate }}</p>
+                <p class="alignCenter"><input type="text" id="email" name="email" [(ngModel)]="email"></p>
             </div>
             <!-- Button Bar -->
             <div class="formButtonBar">
                 <button type="submit">{{ 'button.submit' | translate }}</button>
-                <button type="button" class="buttonNeutral" id="btn-home" [routerLink]="['/home']">{{ 'button.close' | translate }}</button>
+                <button type="button" class="buttonNeutral" id="btn-home" [routerLink]="['/home']">{{ 'button.close' |
+                    translate }}</button>
             </div>
             <!-- ...................................... -->
         </div>

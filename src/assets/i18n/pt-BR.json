@@ -23,9 +23,11 @@
             "txtsignup": "Não tem uma conta? Cadastre-se "
         },
         "profile": "Atualizar Perfil",
-        "pwreset": {
+        "reset": {
             "message": "Para redefinir sua senha, informe seu e-mail abaixo.",
-            "title": "Redefinir senha"
+            "title": "Redefinir senha",
+            "confirmTitle": "Nova Senha",
+            "confirmInstructions": "Por favor, informe sua nova senha."
         },
         "signup": {
             "title": "Cadastre-se"
@@ -54,10 +56,12 @@
         "idRole": "Perfil",
         "approved": "Aprovado",
         "blocked": "Bloqueado",
+        "changePassword": "Alterar Senha",
+        "currentPassword": "Senha Atual",
         "displayName": "Apelido",
         "email": "Email",
         "name": "Nome",
-        "password": "Senha",
+        "password": "Nova Senha",
         "passwordConfirm": "Confirmar Senha",
         "username": "Usuário",
         "validated": "Validado"

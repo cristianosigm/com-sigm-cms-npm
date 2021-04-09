@@ -1,0 +1,29 @@
+<div class="login">
+    <form (ngSubmit)="onSubmit()">
+        <div class="loginForm middleOnParent">
+            <!-- Form Content ......................... -->
+            <h1 class="alignCenter">{{ 'form.reset.confirmTitle' | translate }}</h1>
+            <div class="formGroup">
+                <label for="email">{{ 'user.email' | translate }}</label>
+                <input type="text" class="readonly" id="email" name="email" [(ngModel)]="passwordReset.email"
+                    readonly />
+            </div>
+            <div class="formGroup">
+                <label for="password">{{ 'user.password' | translate }}</label>
+                <input type="password" id="password" name="password" [(ngModel)]="passwordReset.password" />
+            </div>
+            <div class="formGroup">
+                <label for="passwordConfirm">{{ 'user.passwordConfirm' | translate }}</label>
+                <input type="password" id="passwordConfirm" name="passwordConfirm"
+                    [(ngModel)]="passwordReset.passwordConfirm" />
+            </div>
+            <!-- Button Bar -->
+            <div class="formButtonBar">
+                <button type="submit">{{ 'button.submit' | translate }}</button>
+                <button type="button" class="buttonNeutral" id="btn-home" [routerLink]="['/home']">{{ 'button.close' |
+                    translate }}</button>
+            </div>
+            <!-- ...................................... -->
+        </div>
+    </form>
+</div>

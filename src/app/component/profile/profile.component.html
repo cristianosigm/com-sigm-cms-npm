@@ -6,11 +6,11 @@
             <h1 class="alignCenter">{{ 'form.profile' | translate }}</h1>
             <div class="formGroup">
                 <label for="idUser">{{ 'user.id' | translate }}</label>
-                <input type="text" class="readonly" id="idUser" name="idUser" [(ngModel)]="user.id" DISABLED />
+                <input type="text" class="readonly" id="idUser" name="idUser" [(ngModel)]="user.id" readonly />
             </div>
             <div class="formGroup">
                 <label for="email">{{ 'user.email' | translate }}</label>
-                <input type="text" class="readonly" id="email" name="email" [(ngModel)]="user.email" DISABLED />
+                <input type="text" class="readonly" id="email" name="email" [(ngModel)]="user.email" readonly />
             </div>
             <div class="formGroup">
                 <label for="name">{{ 'user.name' | translate }}</label>
@@ -20,13 +20,26 @@
                 <label for="displayName">{{ 'user.displayName' | translate }}</label>
                 <input type="text" id="displayName" name="displayName" [(ngModel)]="user.displayName" />
             </div>
+
+            <div class="formGroup">
+                <label for="changePassword">{{ 'user.changePassword' | translate }}</label>
+                <input type="checkbox" id="changePassword" name="changePassword" [(ngModel)]="user.changePassword" (change)="onChangePassword()" />
+            </div>
+            <div class="formGroup">
+                <label for="currentPassword">{{ 'user.currentPassword' | translate }}</label>
+                <input type="password" [ngClass]="{ 'readonly' : !user.changePassword }" id="currentPassword"
+                    name="currentPassword" [(ngModel)]="user.currentPassword" [disabled]="!user.changePassword" />
+            </div>
+
             <div class="formGroup">
                 <label for="password">{{ 'user.password' | translate }}</label>
-                <input type="text" id="password" name="password" [(ngModel)]="user.password" />
+                <input type="password" [ngClass]="{ 'readonly' : !user.changePassword }" id="password" name="password" [(ngModel)]="user.password"
+                    [disabled]="!user.changePassword" />
             </div>
             <div class="formGroup">
                 <label for="passwordConfirm">{{ 'user.passwordConfirm' | translate }}</label>
-                <input type="text" id="passwordConfirm" name="passwordConfirm" [(ngModel)]="user.passwordConfirm" />
+                <input type="password" [ngClass]="{ 'readonly' : !user.changePassword }" id="passwordConfirm" name="passwordConfirm" [(ngModel)]="user.passwordConfirm"
+                    [disabled]="!user.changePassword" />
             </div>
             <!-- Button Bar -->
             <div class="formButtonBar">

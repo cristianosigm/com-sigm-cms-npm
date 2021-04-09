@@ -4,6 +4,8 @@ export class User {
     idRole: number;
     approved: boolean;
     blocked: boolean;
+    changePassword: boolean;
+    currentPassword: string;
     displayName: string;
     email: string;
     failedAttempts: number;
@@ -20,6 +22,8 @@ export class User {
         this.idRole = 1;
         this.approved = false;
         this.blocked = false;
+        this.changePassword = false;
+        this.currentPassword = '';
         this.displayName = '';
         this.email = '';
         this.failedAttempts = 0;
